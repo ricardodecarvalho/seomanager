@@ -1,0 +1,2 @@
+# seomanager
+SEO Manager
