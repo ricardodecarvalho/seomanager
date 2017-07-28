@@ -1,0 +1,28 @@
+{
+  "name": "ricardodecarvalho/undermaintenance",
+  "type": "library",
+  "description": "SEO Manager",
+  "keywords": [
+    "seo manager",
+    "seo"
+  ],
+  "homepage": "https://github.com/ricardodecarvalho/seomanager",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Ricardo de Carvalho",
+      "email": "skapitao@gmail.com",
+      "homepage": "http://ricardodecarvalho/",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=5.6.0",
+    "doctrine/orm": "^2.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "SeoManager\\": "./src"
+    }
+  }
+}
