@@ -22,7 +22,7 @@ class SeoManager
         if ($schemaManager->tablesExist(array('SeoManager')) != true) {
             $tool = new SchemaTool($this->entityManager);
             $classes = array(
-                $this->entityManager->getClassMetadata('SeoManager\Entity'),
+                $this->entityManager->getClassMetadata('SeoManager\Entity\SeoManager'),
             );
             $tool->createSchema($classes);
         }
