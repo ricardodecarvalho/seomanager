@@ -8,7 +8,7 @@ namespace SeoManager\Entity;
 class SeoManager
 {
     /**
-     * @Id @Column(type="integer", name="idSeoManager") @GeneratedValue
+     * @Id @Column(type="integer", name="id_seoManager") @GeneratedValue
      */
     protected $id;
 
