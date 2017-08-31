@@ -2,17 +2,21 @@
 
 namespace SeoManager;
 
-use Doctrine\ORM\EntityManager,
-    Doctrine\ORM\Tools\SchemaTool;
+use Doctrine\ORM\EntityManager;
+use Doctrine\ORM\Tools\SchemaTool;
 
 class SeoManager
 {
     protected $entityManager;
 
-    public function __construct(EntityManager $entityManager)
+    public function __construct(EntityManager $entityManager, $checkIfTablesExist = true)
     {
         $this->entityManager = $entityManager;
-        $this->checkIfTablesExist();
+
+        if ($checkIfTablesExist) {
+            $this->checkIfTablesExist();
+        }
+
     }
 
     private function checkIfTablesExist()
@@ -34,10 +38,10 @@ class SeoManager
         $seoManager = $seoManagerRepository->findOneBy(array('url' => $basePath));
         if ($seoManager) {
             return [
-              'title'=> $seoManager->getTitle(),
-              'description'=> $seoManager->getDescription(),
-              'keywords'=> $seoManager->getKeywords(),
-            ];
+                'title'=> $seoManager->getTitle(),
+                    'description'=> $seoManager->getDescription(),
+                    'keywords'=> $seoManager->getKeywords(),
+                ];
         }
     }
 }
